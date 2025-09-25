@@ -22,9 +22,9 @@ console.log("Funded the fundMe with %s",fund);
 function run() external   {
 
 address reacentlyDeployedFundMe = DevOpsTools.get_most_recent_deployment("FundMe",block.chainid);
-vm.startBroadcast();
+
 fundFundMe(reacentlyDeployedFundMe);
-vm.stopBroadcast();
+
 }
 
 constructor()payable{
